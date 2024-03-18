@@ -141,7 +141,7 @@ cartButton.onclick = () => {
     " The total amount is " + finalDollars + "$ and " + finalCents + " cents"
   ;
 
-  var whatsappLink= "https://api.whatsapp.com/send?phone=919347442434&text=Order%20details";
+  var whatsappLink= "https://api.whatsapp.com/send?phone=916385541350&text=Order%20details";
     whatsappLink+=cart_details;
     window.open(whatsappLink,'_blank')
 };
