@@ -124,19 +124,24 @@ function updatePrice() {
 cartButton.onclick = () => {
   updatePrice();
 
+  cart_details = ''
 
   for (let index = 0; index < items.length; index++) {
     if (items[index].quantity != 0) {
-      console.log(
-        "Item name: " +
+      cart_details +=
+        " Item name: " +
           items[index].name +
           " - Quantity: " +
           items[index].quantity
-      );
+      ;
     }
   }
 
-  console.log(
-    "The total amount is " + finalDollars + "$ and " + finalCents + " cents"
-  );
+  cart_details +=
+    " The total amount is " + finalDollars + "$ and " + finalCents + " cents"
+  ;
+
+  var whatsappLink= "https://api.whatsapp.com/send?phone=919347442434&text=Order%20details";
+    whatsappLink+=cart_details;
+    window.open(whatsappLink,'_blank')
 };
